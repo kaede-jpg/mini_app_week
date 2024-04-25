@@ -2,7 +2,7 @@ name: Tests and Deploy
 on:
   push:
     branches: 
-      - main
+        - main
 jobs:
   rubocop:
     runs-on: ubuntu-latest
