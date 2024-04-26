@@ -5,7 +5,16 @@ module.exports = {
     './app/assets/stylesheets/**/*.css',
     './app/javascript/**/*.js'
   ],
+  theme: {
+    extend: {},
+    fontFamily: {
+      color: ['Kaisei Decol']
+    }
+  },
   plugins: [
     require("daisyui")
-  ]
+  ],
+  daisyui: {
+    themes: ["cupcake"],
+  },
 }
