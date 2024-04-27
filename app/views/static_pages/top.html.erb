@@ -1,14 +1,10 @@
-<div class="hero min-h-screen bg-base-200">
-  <div class="hero-content flex-col lg:flex-row-reverse">
-    <%= image_tag "https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg", class:"max-w-lg" %>
-    <div>
-      <h1 class="text-8xl font-color">アルティメット色おに</h1>
-	  <div class="py-9 text-center">
-	  	<p class="text-3xl">絵の中から指定された色を見つけるだけの”簡単”なゲームだぞ！</p>
-      	<div class="py-20">
-			<%= link_to "ゲームスタート", "#", class:"btn btn-lg btn-wide btn-accent text-4xl" %>
-		</div>
-	</div>
+<div class="min-h-screen flex justify-center items-scenter flex-col w-full bg-base-200 gap-8">
+  <h1 class="text-center text-8xl font-color">アルティメット色おに</h1>
+  <div class="flex justify-center items-center gap-6 flex-col lg:flex-row-reverse m-10">
+    <%= image_tag "https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" %>
+    <div class="card items-center bg-base-300 rounded-box py-4 px-12 gap-6">
+        <p class="text-3xl">絵の中から指定された色を見つけるだけの”簡単”なゲームだぞ！</p>
+        <%= link_to "ゲームスタート", quizzes_play_path, class:"btn btn-lg btn-wide btn-accent text-4xl" %>
     </div>
   </div>
 </div>

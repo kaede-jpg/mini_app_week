@@ -1,0 +1,16 @@
+<div class="width-full bg-secondary py-2 fixed top-0 left-0 right-0 z-50">
+    <button class="text-4xl font-color" onclick="my_modal_1.showModal()">アルティメット色おに</button>
+</div>
+
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">トップページに戻ります。</h3>
+    <p class="py-4">（結果は保存されません！）</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <%= link_to "トップページへ", root_path, class:"btn btn-accent" %>
+        <button class="btn">ゲームに戻る</button>
+      </form>
+    </div>
+  </div>
+</dialog>
