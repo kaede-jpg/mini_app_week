@@ -1,7 +1,7 @@
 class CreateQuizImages < ActiveRecord::Migration[7.1]
   def change
     create_table :quiz_images do |t|
-      t.string :image, null:false
+      t.string :image, null: false
 
       t.timestamps
     end
