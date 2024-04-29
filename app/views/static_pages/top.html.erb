@@ -1,5 +1,10 @@
-<h1 class="text-3xl font-bold underline">
-	Hello world!
-</h1>
-<button class="bg-gray-900 hover:bg-gray-800 text-white rounded px-4 py-2">tailwind</button>
-<button class="btn">daisyUI</button>
+<div class="min-h-screen flex justify-center items-scenter flex-col w-full bg-base-200 gap-8">
+  <h1 class="text-center text-8xl font-color">アルティメット色おに</h1>
+  <div class="flex justify-center items-center gap-6 flex-col lg:flex-row-reverse m-10">
+    <%= image_tag "https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" %>
+    <div class="card items-center bg-base-300 rounded-box py-4 px-12 gap-6">
+        <p class="text-3xl">絵の中から指定された色を見つけるだけの”簡単”なゲームだぞ！</p>
+        <%= link_to "ゲームスタート", quizzes_play_path, class:"btn btn-lg btn-wide btn-accent text-4xl" %>
+    </div>
+  </div>
+</div>
