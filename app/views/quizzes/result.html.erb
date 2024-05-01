@@ -1,19 +1,29 @@
 <div class="min-h-screen flex flex-col w-full border-opacity-50 bg-base-200 pt-14 gap-4">
   <div class="mt-10 space-y-4">
-    <h1 class="text-center text-6xl font-color">エクセレント！</h1>
+    <h1 class="text-center text-6xl font-color"><%= @comment %></h1>
     <div class="flex justify-center items-center gap-16 flex-col lg:flex-row-reverse">
         <div class="w-52">
             <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
         </div>
         <div class="space-y-4">
-            <ul class="h-auto card bg-base-300 rounded-box py-4 px-12 gap-2 text-4xl">
-                <li>1問目　色名　50点</li>
-                <li>1問目　色名　50点</li>
-                <li>1問目　色名　50点</li>
-                <li>1問目　色名　50点</li>
-                <li>1問目　色名　50点</li>
-            </ul>
-            <p class="text-center text-5xl">合計：250点</p>
+            <div class="flex h-auto bg-base-300 rounded-box py-4 px-12 gap-6 text-4xl">
+              <ul>
+                <li><%= "1問目" %></li>
+                <li><%= "2問目" %></li>
+                <li><%= "3問目" %></li>
+              </ul>
+              <ul class="font-color">
+                <% @result.each do |h| %>
+                  <li><%= h["name"] %></li>
+                <% end %>
+              </ul>
+              <ul class="text-right">
+                <% @result.each do |h| %>
+                  <li><%= "#{h["score"]}点" %></li>
+                <% end %>
+              </ul>
+            </div>
+            <p class="text-center text-5xl"><%= "合計：#{@score}点" %></p>
         </div>
     </div>
   </div>
