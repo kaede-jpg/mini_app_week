@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
     img.onload = function() {
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     };
-    img.src = `/assets/image${imageIndex}.jpg`;
+    img.src = `/image${imageIndex}.jpg`;
     // 色名を表示
     quiz_count.textContent = count + 1 +"問目";
     color_name.textContent = color_object.name;
