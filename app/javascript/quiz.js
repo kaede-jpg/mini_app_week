@@ -53,6 +53,9 @@ canvas.addEventListener('click', function score(evt){
     }else{
         comment.textContent = "Oh..."
     }
+    if (count == 2){
+        modal_btn.textContent = "結果へ"
+    }
     modal.showModal();
   });
 
