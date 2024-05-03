@@ -24,11 +24,4 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_29_065909) do
     t.index ["name"], name: "index_quiz_colors_on_name", unique: true
   end
 
-  create_table "quiz_images", force: :cascade do |t|
-    t.binary "image", null: false
-    t.datetime "created_at", default: -> { "now()" }, null: false
-    t.datetime "updated_at", default: -> { "now()" }, null: false
-    t.index ["image"], name: "index_quiz_images_on_image", unique: true
-  end
-
 end
