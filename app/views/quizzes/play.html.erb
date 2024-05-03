@@ -1,13 +1,13 @@
-<div class="min-h-screen flex justify-center items-center flex-col gap-4 w-full lg:flex-row-reverse pt-14 pb-10 px-10 bg-base-200">
-    <div class="chat chat-end flex items-center gap-12 mt-5">
+<div class="min-h-screen flex justify-center items-center flex-col gap-4 lg:gap-10 w-full lg:flex-row-reverse pt-14 pb-10 px-10 bg-amber-100">
+    <div class="chat chat-end flex items-center mt-5">
         <div class="chat-bubble chat-bubble text-2xl">
             <p id="quiz_count"></p>
             <p id="color_name" class="text-center text-4xl font-color"></p>
             <p class="text-right">を探して！</p>
         </div>
         <div class="chat-image avatar">
-            <div class="w-40 rounded-full">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            <div class="w-52">
+                <%= image_tag "mascot_default.PNG" %>
             </div>
         </div>
     </div>
@@ -18,15 +18,15 @@
 </div>
 
 <dialog id="my_modal_2" class="modal">
-  <div class="modal-box flex items-center flex-col">
-    <div class="chat chat-end flex items-center gap-12"> 
+  <div class="modal-box flex items-center flex-col bg-amber-50">
+    <div class="chat chat-end flex items-center"> 
         <div class="chat-bubble chat-bubble text-center space-y-4">
             <h3 id="comment" class="text-4xl font-color"></h3>
             <p id="score"class="text-4xl"></p>
         </div>
         <div class="chat-image avatar">
-            <div class="w-40 rounded-full">
-                <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            <div class="w-52">
+                <img id="mascot" />
             </div>
         </div>
     </div>

@@ -5,6 +5,7 @@ const ctx = canvas.getContext('2d');
 const modal = document.getElementById("my_modal_2");
 const modal_btn = document.getElementById('my_modal_2_btn');
 const comment = document.getElementById("comment");
+const mascot = document.getElementById("mascot");
 
 let count = 0;
 let color_object = gon.quiz_colors[count];
@@ -48,10 +49,13 @@ canvas.addEventListener('click', function score(evt){
     score.textContent = score_arranged + "点だよ！";
     if (score_arranged >= 60){
         comment.textContent = "Excellent！"
+        mascot.setAttribute('src', '/mascot_surprised.PNG');
     }else if(score_arranged >= 20){
         comment.textContent = "Good！"
+        mascot.setAttribute('src', '/mascot_default.PNG');
     }else{
         comment.textContent = "Oh..."
+        mascot.setAttribute('src', '/mascot_disappointed.PNG');
     }
     if (count == 2){
         modal_btn.textContent = "結果へ"

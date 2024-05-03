@@ -1,8 +1,10 @@
-<div class="min-h-screen flex justify-center items-scenter flex-col w-full bg-base-200 gap-8">
+<div class="min-h-screen flex justify-center items-scenter flex-col w-full bg-amber-100 gap-8">
   <h1 class="text-center text-8xl font-color">アルティメット色おに</h1>
   <div class="flex justify-center items-center gap-6 flex-col lg:flex-row-reverse m-10">
-    <%= image_tag "https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" %>
-    <div class="card items-center bg-base-300 rounded-box py-4 px-12 gap-6">
+    <div class="w-1/2 lg:w-1/4 h-auto">
+      <%= image_tag "mascot_default.PNG" %>
+    </div>
+    <div class="card items-center bg-amber-50 rounded-box py-4 px-12 gap-6">
         <p class="text-3xl">絵の中から指定された色を見つけるだけの”簡単”なゲームだぞ！</p>
         <%= link_to "ゲームスタート", quizzes_play_path, data: {turbo: false}, class:"btn btn-lg btn-accent font-color text-4xl" %>
     </div>
