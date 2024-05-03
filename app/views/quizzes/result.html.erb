@@ -1,9 +1,9 @@
 <div class="min-h-screen flex flex-col w-full border-opacity-50 bg-amber-100 pt-14 gap-4">
   <div class="mt-10 space-y-4">
-    <h1 class="text-center text-6xl font-color"><%= @comment %></h1>
-    <div class="flex justify-center items-center gap-16 flex-col lg:flex-row-reverse">
+    <h1 class="text-center text-6xl font-color"><%= select_comment(@score) %></h1>
+    <div class="flex justify-center items-center flex-col lg:flex-row-reverse">
         <div class="w-1/2 lg:w-1/4 h-auto">
-            <%= image_tag @mascot %>
+            <%= image_tag select_mascot(@score) %>
         </div>
         <div class="space-y-6">
             <div class="flex h-auto bg-amber-50 rounded-box py-4 px-12 gap-6 text-4xl">
@@ -28,8 +28,27 @@
     </div>
   </div>
   <div>
-    <div class="divider">OR</div>
-    <h1 class="text-center text-5xl font-color">スコアランキング</h1>
-    <div class="h-auto card bg-base-300 rounded-box place-items-center">content</div>
+    <div class="divider"></div>
+    <h1 class="text-center text-6xl font-color">スコアランキング</h1>
+    <button id="open_modal" class="btn btn-accent" onclick="my_modal_3.showModal()">ランキングに登録</button>
+    
   </div>
 </div>
+
+<dialog id="my_modal_3" class="modal">
+  <div class="modal-box bg-amber-50">
+    <h3 class="font-bold text-lg">ランクインしました</h3>
+    <%= form_with(url: ranker_create_path, method: :post, local: true) do |f|%>
+      <%= f.text_field :nickname %>
+      <%= f.hidden_field :score, value: @score %>
+    <div class="modal-action">
+      <%= f.submit "登録する", class:"btn btn-accent" %>
+    <% end %>
+      <form method="dialog">
+        <button class="btn">ゲームに戻る</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+<%= javascript_include_tag "ranker" %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'ranker/create'
   get 'quizzes/play'
   post 'quizzes/result'
 

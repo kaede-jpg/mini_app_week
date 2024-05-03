@@ -4,7 +4,7 @@ class CreateQuizColors < ActiveRecord::Migration[7.1]
       t.string :name, null: false
       t.integer :code_r, null: false
       t.integer :code_g, null: false
-      t.integer :code_b
+      t.integer :code_b, null: false
 
       t.timestamps
     end

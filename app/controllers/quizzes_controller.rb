@@ -11,7 +11,8 @@ class QuizzesController < ApplicationController
   def result
     @result = JSON.parse(params[:text])
     @score = @result.sum {|h| h["score"]}
-    @comment = select_comment(@score)
-    @mascot = select_mascot(@score)
+
+    @rankers= Ranker.all.order(score: :desc).limit(10)
   end
+
 end
