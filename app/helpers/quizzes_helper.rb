@@ -6,7 +6,7 @@ module QuizzesHelper
         elsif score < 100
             "もっと頑張ろう…"
         else
-            "まあまあだね"
+            "まあまあだね。"
         end
     end
 
