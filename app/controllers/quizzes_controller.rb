@@ -1,4 +1,6 @@
 class QuizzesController < ApplicationController
+  include QuizzesHelper
+
   def play
     @quiz_colors = QuizColor.all.sample(3).map do |color|
       { name: color[:name], code_r: color[:code_r], code_g: color[:code_g], code_b: color[:code_b] }
@@ -7,6 +9,9 @@ class QuizzesController < ApplicationController
   end
 
   def result
-    @score_result = JSON.parse(params[:text])
+    @result = JSON.parse(params[:text])
+    @score = @result.sum { |h| h['score'] }
+    @comment = select_comment(@score)
+    @mascot = select_mascot(@score)
   end
 end
