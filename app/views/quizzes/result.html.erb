@@ -24,10 +24,12 @@
               </ul>
             </div>
             <p class="text-center text-5xl font-bold"><%= "合計：#{@score}点" %></p>
-            <div class="w-full btn btn-neutral text-2xl">
-              <%= link_to "https://twitter.com/share?url=#{root_path}&text=【#{@score}点を獲得しました！#{@comment}】%0a%23アルティメット色おに", target: '_blank', title: "Xでシェア" do %>
-                結果をXでシェアしよう！
-              <% end %>
+            <div class="w-full flex justify-center">
+              <div class="btn btn-neutral text-2xl">
+                <%= link_to "https://twitter.com/share?url=https://ultimate-irooni-ce6201cdac3a.herokuapp.com/&text=【#{@score}点を獲得しました！#{@comment}】%0a%23アルティメット色おに", target: '_blank', title: "Xでシェア" do %>
+                  結果をXでシェアしよう！
+                <% end %>
+              </div>
             </div>
         </div>
     </div>
