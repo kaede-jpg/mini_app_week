@@ -6,6 +6,8 @@ const modal = document.getElementById("my_modal_2");
 const modal_btn = document.getElementById('my_modal_2_btn');
 const comment = document.getElementById("comment");
 const mascot = document.getElementById("mascot");
+const sample_color = document.getElementById("sample_color");
+const sample_color_name = document.getElementById("sample_color_name");
 
 let count = 0;
 let color_object = gon.quiz_colors[count];
@@ -46,6 +48,8 @@ canvas.addEventListener('click', function score(evt){
     score_result.push({name: color_object.name, score: score_arranged});
     // モーダルを出す
     const score = document.getElementById("score");
+    sample_color.style.backgroundColor = 'rgb(' + [r,g,b,].join(',') + ')';
+    sample_color_name.textContent = color_object.name;
     score.textContent = score_arranged + "点だよ！";
     if (score_arranged >= 60){
         comment.textContent = "Excellent！"

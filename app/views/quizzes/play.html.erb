@@ -20,13 +20,19 @@
 <dialog id="my_modal_2" class="modal">
   <div class="modal-box flex items-center flex-col bg-amber-50">
     <div class="chat chat-end flex items-center"> 
-        <div class="chat-bubble chat-bubble text-center space-y-4">
-            <h3 id="comment" class="text-4xl font-color"></h3>
-            <p id="score"class="text-4xl"></p>
+        <div class="space-y-4">
+            <div class="chat-bubble chat-bubble text-center max-w-none space-y-4">
+                <h3 id="comment" class="text-4xl font-color"></h3>
+                <p id="score"class="text-4xl"></p>
+            </div>
+            <div>
+                <p class="text-center text-xl"><span id="sample_color_name"></span>はこんな色</p>
+                <div id="sample_color" class="mx-auto size-20 rounded-full"></div>
+            </div>
         </div>
         <div class="chat-image avatar">
             <div class="w-52">
-                <img id="mascot" />
+                <img id="mascot"/>
             </div>
         </div>
     </div>
