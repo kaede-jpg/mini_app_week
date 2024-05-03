@@ -1,29 +1,29 @@
-<div class="min-h-screen flex flex-col w-full border-opacity-50 bg-base-200 pt-14 gap-4">
+<div class="min-h-screen flex flex-col w-full border-opacity-50 bg-amber-100 pt-14 gap-4">
   <div class="mt-10 space-y-4">
     <h1 class="text-center text-6xl font-color"><%= @comment %></h1>
     <div class="flex justify-center items-center gap-16 flex-col lg:flex-row-reverse">
-        <div class="w-52">
-            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+        <div class="w-1/2 lg:w-1/4 h-auto">
+            <%= image_tag @mascot %>
         </div>
-        <div class="space-y-4">
-            <div class="flex h-auto bg-base-300 rounded-box py-4 px-12 gap-6 text-4xl">
-              <ul>
+        <div class="space-y-6">
+            <div class="flex h-auto bg-amber-50 rounded-box py-4 px-12 gap-6 text-4xl">
+              <ul class="space-y-4">
                 <li><%= "1問目" %></li>
                 <li><%= "2問目" %></li>
                 <li><%= "3問目" %></li>
               </ul>
-              <ul class="font-color">
+              <ul class="font-color space-y-4">
                 <% @result.each do |h| %>
                   <li><%= h["name"] %></li>
                 <% end %>
               </ul>
-              <ul class="text-right">
+              <ul class="text-right space-y-4">
                 <% @result.each do |h| %>
                   <li><%= "#{h["score"]}点" %></li>
                 <% end %>
               </ul>
             </div>
-            <p class="text-center text-5xl"><%= "合計：#{@score}点" %></p>
+            <p class="text-center text-5xl font-bold"><%= "合計：#{@score}点" %></p>
         </div>
     </div>
   </div>

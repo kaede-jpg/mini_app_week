@@ -11,6 +11,7 @@ class QuizzesController < ApplicationController
   def result
     @result = JSON.parse(params[:text])
     @score = @result.sum {|h| h["score"]}
-    @comment = make_comment(@score)
+    @comment = select_comment(@score)
+    @mascot = select_mascot(@score)
   end
 end
