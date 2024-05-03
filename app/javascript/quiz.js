@@ -48,7 +48,7 @@ canvas.addEventListener('click', function score(evt){
     score_result.push({name: color_object.name, score: score_arranged});
     // モーダルを出す
     const score = document.getElementById("score");
-    sample_color.style.backgroundColor = 'rgb(' + [r,g,b,].join(',') + ')';
+    sample_color.style.backgroundColor = 'rgb(' + [color_object.code_r,color_object.code_g,color_object.code_b,].join(',') + ')';
     sample_color_name.textContent = color_object.name;
     score.textContent = score_arranged + "点だよ！";
     if (score_arranged >= 60){
