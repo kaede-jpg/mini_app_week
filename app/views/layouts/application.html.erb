@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html data-theme="cupcake">
   <head>
-    <title>Aアルティメット色おに</title>
+    <title>アルティメット色おに</title>
     <%= include_gon %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-14NRGW28NK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-14NRGW28NK');
+    </script>
   </head>
 
   <body>
