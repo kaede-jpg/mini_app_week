@@ -1,24 +1,70 @@
-# README
+![logo_title_row](https://github.com/user-attachments/assets/97371bf0-b5e9-4beb-908d-af11ca61f57a)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 「ぷに活監視システム」は、家族・友人にダイエット（食事管理）を監視してもらうことができるサービスです。  
+ゲストログイン機能を実装しましたので、登録せずに機能の一部をお試しいただけます。  
+### [https://www.punikatsu-monitor.com/](https://www.punikatsu-monitor.com/)
 
-Things you may want to cover:
+## ■ このサービスへの想い  
+　夫がダイエットしているにも関わらず、食事制限を継続できない様子にもどかしさを感じていたことから着想を得ました。ダイエットは自分との闘いというイメージを覆し、「誰かに自分を見張ってもらいたい」というニーズを形にすることを目指しました。  
+　このサービスは、他人にダイエットをさせたい人や「ダイエットしたい」と口にしつつ始められない人をターゲットにし、親しい人とのコミュニケーションを基盤とすることで、「食事写真の画像認識でPFCバランスまで管理」「ウェアラブルデバイスのデータで運動量を管理」などの自己管理型ダイエットと差別化を試みています。そのために、監視する・監視されるという片方が優位に立っている歪な関係を作り、監視できる人数を1人対1~3人に制限し1人当たりの責任を重くしています。また、他人に監視されているプレッシャーを重視しているので、記録忘れのリマインド等はあえて監視する側に通知し、リアルなどで指摘させる形にしています。  
+　さらに、使用感を向上させるため、以下のような仕組みを工夫しています。  
+* 監視される側が記録するものは食事の写真だけ  
+* 監視する側がつけるスタンプを食事画像の上に大量に載せ、連打したくなるようにする  
+* 監視する側のカロリー感覚がなくても、たくさんリアクションができるよう、画像認識によって食事名とカロリーを表示  
 
-* Ruby version
+## ■サービスの利用イメージ  
+1. ダイエットを行う側は、食事を画像で記録します。 
+2. 監視する側は、記録を閲覧し、スタンプやコメントを送ることでダイエットを監視し介入することができます。その際、画像認識で食事名とカロリーを知ることができます。
+3. ダイエットを行う側は、もらったスタンプの集計によるスコアを確認できます。
+4. なお、監視する側は、食事や運動の記録更新または記録漏れについてのLINE通知を受け取ることができます。   
 
-* System dependencies
+## ■ 機能一覧  
+### 1. 会員登録・ゲストログイン
 
-* Configuration
+| <img src="https://github.com/user-attachments/assets/d107452e-34b2-4e8e-a023-37258b32af23" width="200"> | <img src="https://github.com/user-attachments/assets/f8a16852-c569-4361-b311-5593582706b1" width="200">  |
+| - | - |
+| フォームを入力すると、登録されたメールアドレスに認証用メールを送信します。メールに記載のURLをクリックするとメールアドレス認証が完了し、ログインできるようになります。<br>LINEでのログインも可能です。通知機能を含むすべての機能を使用する場合はこちらがおすすめです。<br>ログインの際にパスワードを忘れた場合は、再発行が可能です。<br>ユーザー情報は、登録後にも編集ができます。 | ゲストログインでは、会員登録せずに機能の一部をお試しいただけます。 |  
 
-* Database creation
+### 2. ユーザー同士の連携
 
-* Database initialization
+| <img src="https://github.com/user-attachments/assets/d6968fd1-1e42-4c38-88f8-25b788485d94" width="200"> | <img src="https://github.com/user-attachments/assets/e2c9afb8-5b59-4cdc-9e9e-057b5ebf18c1" width="200">  |
+| - | - |
+| まずは「連携コードがないので発行する」から、担当したい役割を選択したうえで連携コードを発行し、連携したいパートナーに共有しましょう。 | 連携コードを受け取ったパートナーは、「連携コードあり」からコードを入力することでユーザー同士の連携が完了します。 |  
 
-* How to run the test suite
+### 3. 食事の記録
 
-* Services (job queues, cache servers, search engines, etc.)
+| <img src="https://github.com/user-attachments/assets/0bd2d7e9-01a1-4803-b6e4-235b13e7fe84" width="200"> | <img src="https://github.com/user-attachments/assets/2e4d9381-3a6f-4070-8a19-11364606290c" width="200"> |
+| - | - |
+| <監視される側>は食事画像の記録を行います。記録を行うと日付がオレンジ色になります。 | <監視する側>には画像認識による食事名とカロリーが表示されます。 |  
 
-* Deployment instructions
+### 4. リアクション
 
-* ...
+| <img src="https://github.com/user-attachments/assets/f36af3ee-37e7-444b-8c65-8f0725364c02" width="200"> | <img src="https://github.com/user-attachments/assets/22395a11-47be-4973-a318-5be6fee10f92" width="200"> | <img src="https://github.com/user-attachments/assets/44cb2f7e-63d7-4f60-a87f-34a67ce80b12" width="200"> |
+| - | - | - |
+| <監視する側>が記録に対してスタンプを送信します。たくさんのスタンプを送ると画面が埋まってしまいます！ | <監視される側>にはスタンプの集計による日別のスコアが表示されます。 | 食事の記録に対してコメントができ、交流することができます。 |    
+
+### 5. LINE通知
+　<監視する側>は、以下の条件で通知を受け取ることができます。  
+  - 監視される側が記録を行ったとき
+  - 監視される側が24時間以上記録を行っていない場合
+
+## ■ 使用技術  
+| カテゴリー | 技術スタック |
+| - | - |
+| フロントエンド | JavaScript, TailwindCSS, DaisyUI |
+| バックエンド | Ruby 3.2.3 Rails 7.1.4.3 |
+| インフラ | Heroku |
+| データベース | PostgreSQL |
+| 開発環境 | Docker |
+| CI/CD | GitHub Actions |
+| VCS | GitHub |
+| その他ツール | Canva, draw.io |
+
+## ■ ER図  
+[![Image from Gyazo](https://i.gyazo.com/4d63a1919cd65dcfd5f81d77da62b69e.png)](https://gyazo.com/4d63a1919cd65dcfd5f81d77da62b69e)  
+
+## ■ アプリ構成図  
+![portforio_infra](https://github.com/user-attachments/assets/ca83209f-cdf5-4f74-a327-0aefd9e671c6)
+
+## ■ 今後の展望  
+  記録状態をデータ化して簡単に振り返ることができる機能や、招待URLをLINEで送信できる機能を実装予定です。  
