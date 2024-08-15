@@ -11,11 +11,11 @@ module QuizzesHelper
 
   def select_mascot(score)
     if score > 200
-      'mascot_surprised.PNG'
+      'mascot_surprised.webp'
     elsif score < 100
-      'mascot_disappointed.PNG'
+      'mascot_disappointed.webp'
     else
-      'mascot_default.PNG'
+      'mascot_default.webp'
     end
   end
 end
