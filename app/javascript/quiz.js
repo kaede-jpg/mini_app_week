@@ -21,7 +21,7 @@ window.addEventListener('load', function() {
     img.onload = function() {
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     };
-    img.src = `/image${imageIndex}.jpg`;
+    img.src = `/image${imageIndex}.webp`;
     // 色名を表示
     quiz_count.textContent = count + 1 +"問目";
     color_name.textContent = color_object.name;
@@ -53,13 +53,13 @@ canvas.addEventListener('click', function score(evt){
     score.textContent = score_arranged + "点だよ！";
     if (score_arranged >= 60){
         comment.textContent = "Excellent！"
-        mascot.setAttribute('src', '/mascot_surprised.PNG');
+        mascot.setAttribute('src', '/mascot_surprised.webp');
     }else if(score_arranged >= 20){
         comment.textContent = "Good！"
-        mascot.setAttribute('src', '/mascot_default.PNG');
+        mascot.setAttribute('src', '/mascot_default.webp');
     }else{
         comment.textContent = "Oh..."
-        mascot.setAttribute('src', '/mascot_disappointed.PNG');
+        mascot.setAttribute('src', '/mascot_disappointed.webp');
     }
     if (count == 2){
         modal_btn.textContent = "結果へ"
